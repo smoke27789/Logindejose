@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login De Jose</title>
+
+    <!-- ENLACE AL CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="spinner"></div>
+</div>
+
+<div class="overlay"></div>
+
+<div class="login-container">
+
+    <!-- LOGO REDONDO -->
+    <div class="logo">
+        <img src="login.png" alt="Logo">
+    </div>
+
+    <h2>Iniciar Sesión</h2>
+
+    <form>
+        <div class="form-group">
+            <label>Correo electrónico</label>
+            <input type="email" placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="password" placeholder="********" required>
+            <span class="eye" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <div class="extra">
+        ¿No tienes cuenta? <a href="#">Regístrate</a>
+    </div>
+
+</div>
+
+<script>
+/* CARGA */
+window.addEventListener("load", () => {
+    document.getElementById("loader").classList.add("hidden");
+});
+
+/* OJITO */
+function togglePassword() {
+    const pass = document.getElementById("password");
+    pass.type = pass.type === "password" ? "text" : "password";
+}
+</script>
+
+</body>
+</html>
